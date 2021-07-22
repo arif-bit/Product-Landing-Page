@@ -21,7 +21,7 @@
 
      <style type="text/css">
          .jumbotron {
-             background-image: url('img/05.jpg');
+             background-image: url('/img/05.jpg');
              background-size: cover;
              background-attachment: fixed;
              background-position: center;
@@ -63,7 +63,8 @@
  </head>
 
  <body data-spy="scroll" data-target="#navScrollspy">
-     <nav class="navbar bg-primary navbar-dark navbar-expand-md fixed-top">
+    <header id="header">
+     <nav class="navbar bg-primary navbar-dark navbar-expand-md fixed-top" id="nav-bar">
          <a href="#" class="navbar-brand"><i class="fas fa-camera-retro" aria-hidden="true"></i> Inshot</a>
          <button type="button" class="navbar navbar-toggler navbar-toggler-right" data-toggle="collapse"
              data-target="#navbarNav" aria-controls="mavbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,20 +98,24 @@
          </div>
      </nav>
 
+     
+         <section id="section-top"
+             class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
+             <div class="container text-center">
+                 <h1 class="display-1 text-primary text-uppercase">Inshot</h1>
+                 <p class="display-4 d-none d-sm-block">Capture every moment</p>
+                 <p class="lead">Create stuning photos and videos by using the built-in features for enhancement</p>
+                 <p class="lead">Share your best shots with your friends and rest of the world instantly</p>
+                 <p><strong>Download Now on:</strong></p>
+                 <a href="#" class="btn btn-lg btn-primary mid"><i class="fab fa-app-store-ios"></i> App Store</a>
+                 <a href="#" class="btn btn-lg btn-primary mid"><i class="fab fa-google-play" aria-hidden="true"></i>
+                     Google
+                     Play</a>
+             </div>
+             <img src="" alt="" id="header-img">
+         </section>
+     </header>
 
-     <section id="section-top"
-         class="jumbotron jumbotron-fluid text-white d-flex justify-content-center align-items-center">
-         <div class="container text-center">
-             <h1 class="display-1 text-primary text-uppercase">Inshot</h1>
-             <p class="display-4 d-none d-sm-block">Capture every moment</p>
-             <p class="lead">Create stuning photos and videos by using the built-in features for enhancement</p>
-             <p class="lead">Share your best shots with your friends and rest of the world instantly</p>
-             <p><strong>Download Now on:</strong></p>
-             <a href="#" class="btn btn-lg btn-primary mid"><i class="fab fa-app-store-ios"></i> App Store</a>
-             <a href="#" class="btn btn-lg btn-primary mid"><i class="fab fa-google-play" aria-hidden="true"></i> Google
-                 Play</a>
-         </div>
-     </section>
 
 
      <div class="container">
@@ -131,7 +136,7 @@
              <h2 class="display-4 text-center">Inshot Trailer</h2>
              <p class="text-center">Watch out tailer video to learn how Inshot works.</p>
              <div class="embed-responsive embed-responsive-16by9">
-                 <iframe class="embed-responsive-item" src="trailer/InShottrailer.mp4" frameborder="0"></iframe>
+                 <iframe class="embed-responsive-item" id="video" src="trailer/InShottrailer.mp4" frameborder="0"></iframe>
              </div>
          </section>
 
@@ -380,7 +385,7 @@
 
      <section id="section-newsletter" class="bg-secondary">
          <div class="container">
-             <form class="py-5 text-white">
+             <form class="py-5 text-white" id="form" action="https://www.freecodecamp.com/email-submit">
                  <h2 class="text-center">Sign-up for the newsletter</h2>
                  <p>Recieve the latest news and offers by signing up to our newsletter.</p>
                  <div class="row">
@@ -393,13 +398,13 @@
                      <div class="col-12 col-sm-6">
                          <div class="form-group">
                              <label for="input-email" class="sr-only">Your email:</label>
-                             <input type="email" class="form-control" placeholder="mail@example.com" id="input-email">
+                             <input type="email" id="email" class="form-control" placeholder="mail@example.com" name="email" id="input-email">
                          </div>
                      </div>
                  </div>
                  <div class="form-check">
                      <label for="form-check-label">
-                         <input type="checkbox" class="form-check-input" id="input-terms" value="terms">
+                         <input type="checkbox" class="form-check-input" id="input-terms" value="terms" >
                          I have read and accept the <a href="#" data-toggle="modal" data-target="#modal"> terms and
                              conditions</a>.
                      </label>
@@ -407,7 +412,8 @@
 
                  <div class="d-flex justify-content-between">
                      <small class="form-text">You can subscribe the mailing list at any time.</small>
-                     <button type="submit" class="btn btn-dark">Sign up</button>
+                     <button type="submit" class="btn btn-dark"><input id="submit" type="submit" value="Sign up" class="btn btn-dark" /></button>
+                     
                  </div>
 
 
@@ -564,6 +570,9 @@
 
          });
      </script>
+
+
+     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 
  </body>
